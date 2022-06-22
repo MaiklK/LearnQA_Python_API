@@ -4,7 +4,7 @@ import requests
 payload = {"name": "Raids"}
 key = 'answer'
 
-response = requests.get("https://playground.learnqa.ru/api/get_text", params=payload)
+response = requests.post("https://playground.learnqa.ru/api/check_type", data=payload)
 print(response.text)
 try:
     parsed_response_text = response.json()
